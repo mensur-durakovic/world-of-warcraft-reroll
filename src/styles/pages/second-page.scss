@@ -1,0 +1,115 @@
+.second-page {
+  &-classic {
+    background: url("../../assets/images/CLASSIC_black1.png");
+    height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow-y: auto;
+  }
+
+  &-azeroth {
+    background: url("../../assets/images/BFA_black1.png");
+    height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow-y: auto;
+  }
+
+  & > main {
+    width: 100vw;
+    height: 100vh;
+  }
+
+  &-container {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    padding: 0;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    &-left {
+      width: 50%;
+      min-width: 50%;
+      max-width: 50%;
+      display: flex;
+      justify-content: space-around;
+      position: relative;
+
+      &-card {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        cursor: pointer;
+
+        &-special {
+          position: absolute;
+          right: -35px;
+          @media (min-width: 768px) {
+            right: -55px;
+          }
+        }
+
+        &-special-sec {
+          position: absolute;
+          right: 60px;
+          @media (min-width: 768px) {
+            right: 110px;
+          }
+        }
+
+        &-title {
+          font-size: 18px;
+          text-transform: uppercase;
+
+          @media (min-width: 768px) {
+            font-size: 22px;
+          }
+        }
+
+        > img {
+          min-width: 100px;
+          max-width: 100px;
+          min-height: 100px;
+          max-height: 100px;
+          margin-bottom: 25px;
+
+          @media (min-width: 768px) {
+            min-width: 150px;
+            max-width: 150px;
+            min-height: 150px;
+            max-height: 150px;
+          }
+        }
+      }
+    }
+
+    &-right {
+      width: 50%;
+      min-width: 50%;
+      max-width: 50%;
+      z-index: 2;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.9);
+      position: relative;
+
+      &-shadow {
+        position: absolute;
+        top: 25%;
+        left: -15px;
+        background: url("../../assets/images/shadow-vertical.png");
+        height: 65%;
+        width: 35px;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+      }
+    }
+  }
+}

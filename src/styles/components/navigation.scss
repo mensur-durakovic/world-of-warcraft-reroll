@@ -1,0 +1,110 @@
+.navigation {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px 0;
+  font-size: 12px;
+
+  ul {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    @media (min-width: 768px) {
+      flex-direction: row;
+    }
+  }
+
+  ul li {
+    min-width: 50px;
+    min-height: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    @media (min-width: 768px) {
+      flex-direction: row;
+      min-width: 100px;
+      min-height: 30px;
+    }
+  }
+
+  ul li a {
+    display: block;
+    color: white;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    min-height: 30px;
+    max-width: 150px;
+
+    @media (min-width: 768px) {
+      max-width: 70px;
+    }
+  }
+
+  &-logo {
+    margin-top: 0;
+    min-width: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &-active {
+      position: relative;
+      background-image: url("../../assets/images/shadow.png");
+      background-repeat: no-repeat;
+      background-position: center;
+      
+
+      &-left{
+        animation: fadeLeft 0.5s;
+      }
+      &-right{
+        animation: fadeRight 0.5s;
+      }
+    }
+
+    @keyframes fadeLeft {
+      0% {
+        left: -100%;
+      }
+      100% {
+        left: 0%;
+      }
+    }
+    @keyframes fadeRight {
+      0% {
+        right: -100%;
+      }
+      100% {
+        right: 0%;
+      }
+    }
+
+    @media (min-width: 768px) {
+      margin-top: 25px;
+    }
+
+    &-container {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
+      min-width: 270px;
+      cursor: pointer;
+
+      @media (min-width: 768px) {
+        min-width: 70px;
+        flex-direction: column;
+      }
+    }
+
+    & > img {
+      min-width: 35px;
+      max-width: 35px;
+      min-height: 35px;
+      max-height: 35px;
+    }
+  }
+}

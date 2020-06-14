@@ -1,0 +1,3 @@
+export const MODE_CLASSIC = 'MODE_CLASSIC';
+export const MODE_BATTLE_OF_AZEROTH = 'MODE_BATTLE_OF_AZEROTH';
+

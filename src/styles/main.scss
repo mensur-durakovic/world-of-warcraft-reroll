@@ -1,0 +1,16 @@
+@import './base/fonts.scss';
+@import './base/base.scss';
+@import './base/settings.scss';
+
+//components
+@import './components/navigation.scss';
+@import './components/footer.scss';
+@import './components/navigation-secondary.scss';
+@import './components/switcher.scss';
+@import './components/final-switcher.scss';
+
+//pages
+@import './pages/first-page.scss';
+@import './pages/second-page.scss';
+@import './pages/third-page.scss';
+@import './pages/fourth-page.scss';

@@ -1,0 +1,308 @@
+.switcher{
+
+    margin: 0 0 70px 0;
+    @media (min-width: 768px) {
+        margin: 0 10px 40px 10px;
+    }
+
+    &-head{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        
+    }
+
+    &-body{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+
+        &-left{
+
+            height: 70px;
+            min-height: 70px;
+            width: 145px;
+            max-width: 145px;
+            display: flex;
+            flex-direction: row;
+            align-items: flex-end;
+            justify-content: flex-end;
+
+            @media (min-width: 768px) {
+                width: 215px;
+                max-width: 215px;
+            }
+
+            &-vertical {
+                width: 1px;
+                max-width: 1px;
+                height: 40px;
+                max-height: 40px;
+
+                &-active{
+                    width: 1px;
+                    max-width: 1px;
+                    height: 40px;
+                    max-height: 40px;
+                    background-color: $yellow;
+                }
+            }
+
+            &-horizontal {
+                height: 1px;
+                max-height: 1px;
+                width: 70px;
+                max-width: 70px;
+                @media (min-width: 768px) {
+                    width: 90px;
+                    max-width: 90px;
+                }
+
+                &-active{
+                    height: 1px;
+                    max-height: 1px;
+                    width: 70px;
+                    max-width: 70px;
+                    background-color: $yellow;
+                    @media (min-width: 768px) {
+                        width: 90px;
+                        max-width: 90px;
+                    }
+                }
+            }
+        }
+
+        &-central{
+            margin-top: 65px;
+            height: 70px;
+            max-height: 70px;
+            width: 70px;
+            max-width: 70px;
+            border-radius: 70px;
+            background-color: $yellow;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+
+            > img {
+                height: 40px;
+                max-height: 40px;
+                width: 40px;
+                max-width: 40px;
+            }
+
+        }
+
+        &-right{
+            width: 145px;
+            max-width: 145px;
+            height: 70px;
+            min-height: 70px;
+            display: flex;
+            flex-direction: row;
+            align-items: flex-end;
+            justify-content: flex-start;
+
+            @media (min-width: 768px) {
+                width: 215px;
+                max-width: 215px;
+            }
+
+            &-vertical {
+                width: 1px;
+                max-width: 1px;
+                height: 40px;
+                max-height: 40px;
+
+                &-active{
+                    width: 1px;
+                    max-width: 1px;
+                    height: 40px;
+                    max-height: 40px;
+                    background-color: $yellow;
+                }
+            }
+
+            &-horizontal {
+                height: 1px;
+                max-height: 1px;
+                width: 70px;
+                max-width: 70px;
+                @media (min-width: 768px) {
+                    width: 90px;
+                    max-width: 90px;
+                }
+
+                &-active{
+                    height: 1px;
+                    max-height: 1px;
+                    width: 70px;
+                    max-width: 70px;
+                    background-color: $yellow;
+                    @media (min-width: 768px) {
+                        width: 90px;
+                        max-width: 90px;
+                    }
+                }
+
+            }
+
+        }
+
+        &-footer{
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            &-vertical{
+                width: 1px;
+                max-width: 1px;
+                height: 70px;
+                max-height: 70px;
+                background-color: $yellow;
+                margin-left: 180px;
+                margin-right: 180px;
+            }
+        }
+    }
+
+    &-footer{
+
+        &-card{
+
+            margin-top: 25px;
+
+            &-image {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+    
+                & > img {
+                    min-width: 100px;
+                    max-width: 100px;
+                    min-height: 100px;
+                    max-height: 100px;
+    
+                    @media (min-width: 768px) {
+                        min-width: 150px;
+                        max-width: 150px;
+                        min-height: 150px;
+                        max-height: 150px;
+                    }
+                }
+            }
+
+            &-title{
+                text-align: center;
+                text-transform: uppercase;
+                font-size: 20px;
+            }
+
+            &-shadow{
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                
+                margin: 20px 0;
+
+
+                &-image{
+                    width: 150px;
+                    max-width: 150px;
+                    min-width: 150px;
+                    height: 30px;
+                    background: url("../../assets/images/shadow.png");
+                    background-position: center;
+                    background-repeat: no-repeat;
+                    background-size: contain;
+                    @media (min-width: 768px) {
+                        width: 220px;
+                        max-width: 220px;
+                        min-width: 220px;
+                        background-size: cover;
+                    }
+                }
+            }
+
+        }
+
+    }
+
+    &-card{
+
+        margin: 0 15px;
+        @media (min-width: 770px) {
+            margin: 0 15px;
+        }
+
+        &-image {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            & > img {
+                min-width: 100px;
+                max-width: 100px;
+                min-height: 100px;
+                max-height: 100px;
+
+                @media (min-width: 768px) {
+                    min-width: 150px;
+                    max-width: 150px;
+                    min-height: 150px;
+                    max-height: 150px;
+                }
+            }
+        }
+
+        &-title{
+
+            text-align: center;
+            text-transform: uppercase;
+            font-size: 20px;
+            color: grey; 
+
+            &-active{
+                text-align: center;
+                text-transform: uppercase;
+                font-size: 20px;
+                color: white;
+            }
+        }
+
+        &-shadow{
+            width: 150px;
+            max-width: 150px;
+            min-width: 150px;
+            height: 30px;
+            margin: 10px 0;
+
+            @media (min-width: 768px) {
+                width: 220px;
+                max-width: 220px;
+                min-width: 220px;
+            }
+
+            &-active {
+                width: 150px;
+                max-width: 150px;
+                min-width: 150px;
+                height: 30px;
+                margin: 10px 0;
+                background: url("../../assets/images/shadow.png");
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: contain;
+
+                @media (min-width: 768px) {
+                    width: 220px;
+                    max-width: 220px;
+                    min-width: 220px;
+                    background-size: cover;
+                }
+              }
+        }
+    }
+}

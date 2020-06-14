@@ -1,0 +1,174 @@
+{
+    "classic": {
+        "navigationClasses" : [
+            {
+                "name": "All", 
+                "isActive": true
+            },
+            {
+                "name": "Tank only", 
+                "isActive": false
+            },
+            {
+                "name": "Healer only", 
+                "isActive": false
+            },
+            {
+                "name": "Ranged DPS only", 
+                "isActive": false
+            },
+            {
+                "name": "Melee DPS only", 
+                "isActive": false
+            }
+        ],
+        "pickingClasses": [
+            {
+                "name": "Druid",
+                "isActive": true,
+                "characteristics": [
+                    "Druid - 2 ranged and 1 melee specs",
+                    "Druid - Can have a pet companion",
+                    "Druid - Very mobile character",
+                    "Druid - Can not be interrupted"
+                ]
+            },
+            {
+                "name": "Shaman",
+                "isActive": false,
+                "characteristics": [
+                    "Shaman - 2 ranged and 1 melee specs",
+                    "Shaman - Can have a pet companion",
+                    "Shaman - Very mobile character",
+                    "Shaman - Can not be interrupted"
+                ]
+            },
+            {
+                "name": "Priest",
+                "isActive": true,
+                "characteristics": [
+                    "Priest - 2 ranged and 1 melee specs",
+                    "Priest - Can have a pet companion",
+                    "Priest - Very mobile character",
+                    "Priest - Can not be interrupted"
+                ]
+            },
+            {
+                "name": "Mage",
+                "isActive": false,
+                "characteristics": [
+                    "Mage - 2 ranged and 1 melee specs",
+                    "Mage - Can have a pet companion",
+                    "Mage - Very mobile character",
+                    "Mage - Can not be interrupted"
+                ]
+            },
+            {
+                "name": "Warlock",
+                "isActive": true,
+                "characteristics": [
+                    "Warlock - 2 ranged and 1 melee specs",
+                    "Warlock - Can have a pet companion",
+                    "Warlock - Very mobile character",
+                    "Warlock - Can not be interrupted"
+                ]
+            },
+            {
+                "name": "Hunter",
+                "isActive": false,
+                "characteristics": [
+                    "Hunter - 2 ranged and 1 melee specs",
+                    "Hunter - Can have a pet companion",
+                    "Hunter - Very mobile character",
+                    "Hunter - Can not be interrupted"
+                ]
+            }
+        ]
+    },
+    "azeroth": {
+        "navigationClasses" : [
+            {
+                "name": "All", 
+                "isActive": true
+            },
+            {
+                "name": "Tank only", 
+                "isActive": false
+            },
+            {
+                "name": "Healer only", 
+                "isActive": false
+            },
+            {
+                "name": "Ranged DPS only", 
+                "isActive": false
+            },
+            {
+                "name": "Melee DPS only", 
+                "isActive": false
+            }
+        ],
+        "pickingClasses": [
+            {
+                "name": "Adruid",
+                "isActive": true,
+                "characteristics": [
+                    "Adruid- 2 ranged and 1 melee specs",
+                    "Adruid- Can have a pet companion",
+                    "Adruid- Very mobile character",
+                    "Adruid- Can not be interrupted"
+                ]
+            },
+            {
+                "name": "Ashaman",
+                "isActive": false,
+                "characteristics": [
+                    "Ashaman - 2 ranged and 1 melee specs",
+                    "Ashaman - Can have a pet companion",
+                    "Ashaman - Very mobile character",
+                    "Ashaman - Can not be interrupted"
+                ]
+            },
+            {
+                "name": "Apriest",
+                "isActive": true,
+                "characteristics": [
+                    "Apriest - 2 ranged and 1 melee specs",
+                    "Apriest - Can have a pet companion",
+                    "Apriest - Very mobile character",
+                    "Apriest - Can not be interrupted"
+                ]
+            },
+            {
+                "name": "Amage",
+                "isActive": false,
+                "characteristics": [
+                    "Amage - 2 ranged and 1 melee specs",
+                    "Amage - Can have a pet companion",
+                    "Amage - Very mobile character",
+                    "Amage - Can not be interrupted"
+                ]
+            },
+            {
+                "name": "Awarlock",
+                "isActive": true,
+                "characteristics": [
+                    "Awarlock - 2 ranged and 1 melee specs",
+                    "Awarlock - Can have a pet companion",
+                    "Awarlock - Very mobile character",
+                    "Awarlock - Can not be interrupted"
+                ]
+            },
+            {
+                "name": "Ahunter",
+                "isActive": false,
+                "characteristics": [
+                    "Ahunter - 2 ranged and 1 melee specs",
+                    "Ahunter - Can have a pet companion",
+                    "Ahunter - Very mobile character",
+                    "Ahunter - Can not be interrupted"
+                ]
+            }
+        ]
+    }
+}
