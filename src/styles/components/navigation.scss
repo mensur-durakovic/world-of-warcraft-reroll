@@ -46,9 +46,42 @@
   &-logo {
     margin-top: 0;
     min-width: 150px;
+    min-height: 35px;
     display: flex;
     align-items: center;
     justify-content: center;
+    @media (min-width: 768px) {
+      margin-top: 25px;
+    }
+
+    &-icon-wrapper {
+      min-width: 150px;
+      max-width: 150px;
+      min-height: 35px;
+      max-height: 35px;
+      position: absolute;
+      top:0;
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      @media (min-width: 768px) {
+        margin-top: 25px;
+      }
+
+      & > img {
+        
+        min-width: 35px;
+        max-width: 35px;
+        min-height: 35px;
+        max-height: 35px;
+      }
+    }
+
+    &-wrapper{
+      position: relative;
+
+      
+    }
 
     &-active {
       position: relative;
@@ -56,7 +89,6 @@
       background-repeat: no-repeat;
       background-position: center;
       
-
       &-left{
         animation: fadeLeft 0.5s;
       }
@@ -82,9 +114,7 @@
       }
     }
 
-    @media (min-width: 768px) {
-      margin-top: 25px;
-    }
+
 
     &-container {
       display: flex;
@@ -98,13 +128,10 @@
         min-width: 70px;
         flex-direction: column;
       }
+
+      
     }
 
-    & > img {
-      min-width: 35px;
-      max-width: 35px;
-      min-height: 35px;
-      max-height: 35px;
-    }
+    
   }
 }

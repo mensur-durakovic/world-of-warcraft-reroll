@@ -32,17 +32,21 @@ const NavigationSecondary = React.memo(props => {
         }
     }
 
+    const goToMainPage = () => {
+        window.location.href = '/';
+    }
+
     return <>
         <nav className='navigation-secondary'>
-            <div className='navigation-secondary-left' onClick={() => {window.location.href = '/'}}>
+            <div className='navigation-secondary-left' onClick={goToMainPage}>
                 <img src={Logo} alt='Re Roll logo'></img>
                 {overlayMode && <div className="after"></div>}
             </div>
-            <div className='navigation-secondary-central'>
+            <div className='navigation-secondary-central' onClick={goToMainPage}>
                 <img src={gameMode === gameModeClassic ? ClassicActive : AzerothActive} alt='Game mode'></img>
                 {overlayMode && <div className="after"></div>}
             </div>
-            <div className='navigation-secondary-right'>
+            <div className='navigation-secondary-right' onClick={goToMainPage}>
                 <span>{navChoice ? navChoice : NAVIGATION_ITEM_ALL}</span>
                 <img src={getResourceImage(navChoice)} alt='Class choice'></img>
                 {overlayMode && <div className="after"></div>}

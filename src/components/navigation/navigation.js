@@ -34,7 +34,7 @@ const Navigation = React.memo(props => {
             case NAVIGATION_ITEM_HEALER_ONLY: return isActive ? HealerActive : HealerInactive;
             case NAVIGATION_ITEM_RANGED_DPS_ONLY: return isActive ? RangedActive : RangedInactive;
             case NAVIGATION_ITEM_MELEE_DPS_ONLY: return isActive ? MeleeActive : MeleeInactive;
-            default: return '';
+            default: return AllActive;
         }
     }
 
@@ -49,10 +49,15 @@ const Navigation = React.memo(props => {
         <li key={`navigation-item-${Math.random()}`}>
             <div className='navigation-logo-container' onClick={() => handleAnimationDirection(item.name)}>
                 <a href="/">{item.name}</a>
-                <div className={`navigation-logo ${item.isActive 
-                    ? `navigation-logo-active navigation-logo-active-${animationDirection}` : ''}`}>
-                    <img src={getResourceImage(item.name, item.isActive)} alt='tank'></img>
+                <div className='navigation-logo-wrapper'>
+                    <div className={`navigation-logo ${item.isActive 
+                        ? `navigation-logo-active navigation-logo-active-${animationDirection}` : ''}`}>
+                    </div>
+                    <div className='navigation-logo-icon-wrapper'>
+                        <img src={getResourceImage(item.name, item.isActive)} alt={item.name}></img>
+                    </div>
                 </div>
+                
             </div>
         </li>
     ) : null;
