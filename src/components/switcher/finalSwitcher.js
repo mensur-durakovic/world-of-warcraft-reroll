@@ -33,7 +33,7 @@ const FinalSwitcher = React.memo((props) => {
   return (
     <section className="final-switcher">
       <div className="final-switcher-head">
-        <div className="final-switcher-card">
+        <div className="final-switcher-card" onClick={toggleChoiceHandler}>
             <div className={`${firstOptionActive ? 'final-switcher-card-shadow-active' : 'final-switcher-card-shadow'}`}></div>
             <div className={`final-switcher-card-image ${!firstOptionActive ? 'final-switcher-card-image-gray' : ''}`}>
                 <img src={firstOptionImg} alt={firstOptionImageAltText}></img>
@@ -43,7 +43,7 @@ const FinalSwitcher = React.memo((props) => {
                 {firstOptionTitle}
             </div>
         </div>
-        <div className="final-switcher-card">
+        <div className="final-switcher-card" onClick={toggleChoiceHandler}>
             <div className={`${secondOptionActive ? 'final-switcher-card-shadow-active' : 'final-switcher-card-shadow'}`}></div>
             <div className={`final-switcher-card-image ${!secondOptionActive ? 'final-switcher-card-image-gray' : ''}`}>
                 <img src={secondOptionImg} alt={secondOptionImageAltText}></img>

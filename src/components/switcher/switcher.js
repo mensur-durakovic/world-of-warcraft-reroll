@@ -31,9 +31,9 @@ const Switcher = React.memo((props) => {
   return (
     <section className="switcher">
       <div className="switcher-head">
-        <div className="switcher-card">
+        <div className="switcher-card" onClick={toggleChoiceHandler}>
             <div className={`${firstOptionActive ? 'switcher-card-shadow-active' : 'switcher-card-shadow'}`}></div>
-            <div className={`switcher-card-image ${!firstOptionActive ? 'switcher-card-image-gray' : ''}`}>
+            <div className={`switcher-card-image ${!firstOptionActive ? 'switcher-card-image-gray' : ''}`} >
                 <img src={firstOptionImg} alt={firstOptionImageAltText}></img>
             </div>
             <div className={`${firstOptionActive ? 'switcher-card-shadow-active' : 'switcher-card-shadow'}`}></div>
@@ -41,7 +41,7 @@ const Switcher = React.memo((props) => {
                 {firstOptionTitle}
             </div>
         </div>
-        <div className="switcher-card">
+        <div className="switcher-card" onClick={toggleChoiceHandler}>
             <div className={`${secondOptionActive ? 'switcher-card-shadow-active' : 'switcher-card-shadow'}`}></div>
             <div className={`switcher-card-image ${!secondOptionActive ? 'switcher-card-image-gray' : ''}`}>
                 <img src={secondOptionImg} alt={secondOptionImageAltText}></img>
