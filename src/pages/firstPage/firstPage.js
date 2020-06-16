@@ -5,10 +5,8 @@ import { gameModeClassic, gameModeAzeroth } from '../../constants/gameModes'
 
 import Logo from '../../assets/images/re_roll_logotyp.svg';
 import ClassicActive from '../../assets/images/wow_classic_logo.png';
-import ClassicInactive from '../../assets/images/wow_classic_logo_gray.png';
 
 import AzerothActive from '../../assets/images/wow_bfa_logo.png';
-import AzerothInactive from '../../assets/images/wow_bfa_logo_gray.png';
 
 const FirstPage = React.memo((props) => {
 
@@ -21,14 +19,15 @@ const FirstPage = React.memo((props) => {
           <div className='wrapper'>
             <img src={Logo} alt='Re Roll logo'></img>
             <div className='game-mode-chooser'>
-              <div className='game-mode-chooser-image' onClick={() => setGameMode(gameModeAzeroth)}>
-                <img alt={`${gameMode === gameModeAzeroth ? 'WoW Azeroth logo' : 'WoW Azeroth logo'} `} 
-                  src={`${gameMode === gameModeAzeroth ? AzerothActive : AzerothInactive} `}></img>
+              <div className={`game-mode-chooser-image ${!(gameMode === gameModeAzeroth) ? 'game-mode-chooser-image-gray' : ''}`} 
+                onClick={() => setGameMode(gameModeAzeroth)}>
+                <img alt={'WoW Azeroth logo'} src={AzerothActive}></img>
                 <div className={`shadow-bottom ${gameMode === gameModeAzeroth ? 'shadow-bottom-active' : ''}`}></div>
               </div>
-              <div className='game-mode-chooser-image'  onClick={() => setGameMode(gameModeClassic)}>
-                <img alt={`${gameMode === gameModeClassic ? 'WoW classic logo' : 'WoW classic logo gray'} `} 
-                  src={`${gameMode === gameModeClassic ? ClassicActive : ClassicInactive} `}></img>
+              <div className={`game-mode-chooser-image ${!(gameMode === gameModeClassic) ? 'game-mode-chooser-image-gray' : ''}`}   
+                onClick={() => setGameMode(gameModeClassic)}>
+                <img alt='WoW classic logo' 
+                  src={ClassicActive}></img>
                 <div className={`shadow-bottom ${gameMode === gameModeClassic ? 'shadow-bottom-active' : ''}`}></div>
               </div>
             </div>

@@ -64,6 +64,10 @@
       align-items: center;
       justify-content: center;
 
+      &-gray{
+        filter: grayscale(100%);
+      }
+
       > img {
         min-width: 190px;
         max-width: 190px;

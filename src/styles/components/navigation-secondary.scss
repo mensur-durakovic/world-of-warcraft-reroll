@@ -18,6 +18,10 @@
     position: relative;
     cursor: pointer;
 
+    &-gray{
+      filter: grayscale(100%);
+    }
+
     & .after{
       position: absolute;
       top: 0;
@@ -46,6 +50,10 @@
   &-central {
     position: relative;
     cursor: pointer;
+
+    &-gray{
+      filter: grayscale(100%);
+    }
 
     & .after{
       position: absolute;
@@ -79,6 +87,10 @@
     justify-content: center;
     position: relative;
     cursor: pointer;
+
+    &-gray{
+      filter: grayscale(100%);
+    }
 
     & .after{
       position: absolute;

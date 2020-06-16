@@ -39,17 +39,22 @@ const NavigationSecondary = React.memo(props => {
     return <>
         <nav className='navigation-secondary'>
             <div className='navigation-secondary-left' onClick={goToMainPage}>
-                <img src={Logo} alt='Re Roll logo'></img>
-                {overlayMode && <div className="after"></div>}
+                <img className={`${overlayMode ? 'navigation-secondary-left-gray' : ''}`}
+                    src={Logo} 
+                    alt='Re Roll logo'></img>
             </div>
             <div className='navigation-secondary-central' onClick={goToMainPage}>
-                <img src={gameMode === gameModeClassic ? ClassicActive : AzerothActive} alt='Game mode'></img>
-                {overlayMode && <div className="after"></div>}
+                <img className={`${overlayMode ? 'navigation-secondary-central-gray' : ''}`} 
+                    src={gameMode === gameModeClassic ? ClassicActive : AzerothActive} 
+                    alt='Game mode'></img>
             </div>
             <div className='navigation-secondary-right' onClick={goToMainPage}>
-                <span>{navChoice ? navChoice : NAVIGATION_ITEM_ALL}</span>
-                <img src={getResourceImage(navChoice)} alt='Class choice'></img>
-                {overlayMode && <div className="after"></div>}
+                <span className={`${overlayMode ? 'navigation-secondary-right-gray' : ''}`} >
+                    {navChoice ? navChoice : NAVIGATION_ITEM_ALL}
+                </span>
+                <img className={`${overlayMode ? 'navigation-secondary-right-gray' : ''}`} 
+                src={getResourceImage(navChoice)} 
+                alt='Class choice'></img>
             </div>
         </nav>
     </>
