@@ -8,12 +8,10 @@ const FinalSwitcher = React.memo((props) => {
 
     firstOptionTitle,
     firstOptionImg,
-    firstOptionImgGray,
     firstOptionImageAltText,
 
     secondOptionTitle,
     secondOptionImg,
-    secondOptionImgGray,
     secondOptionImageAltText,
 
     thirdOptionTitle,
@@ -37,8 +35,8 @@ const FinalSwitcher = React.memo((props) => {
       <div className="final-switcher-head">
         <div className="final-switcher-card">
             <div className={`${firstOptionActive ? 'final-switcher-card-shadow-active' : 'final-switcher-card-shadow'}`}></div>
-            <div className="final-switcher-card-image">
-                <img src={firstOptionActive ? firstOptionImg : firstOptionImgGray} alt={firstOptionImageAltText}></img>
+            <div className={`final-switcher-card-image ${!firstOptionActive ? 'final-switcher-card-image-gray' : ''}`}>
+                <img src={firstOptionImg} alt={firstOptionImageAltText}></img>
             </div>
             <div className={`${firstOptionActive ? 'final-switcher-card-shadow-active' : 'final-switcher-card-shadow'}`}></div>
             <div className={`${firstOptionActive ? 'final-switcher-card-title-active' : 'final-switcher-card-title'}`}>
@@ -47,8 +45,8 @@ const FinalSwitcher = React.memo((props) => {
         </div>
         <div className="final-switcher-card">
             <div className={`${secondOptionActive ? 'final-switcher-card-shadow-active' : 'final-switcher-card-shadow'}`}></div>
-            <div className="final-switcher-card-image">
-                <img src={secondOptionActive ? secondOptionImg : secondOptionImgGray} alt={secondOptionImageAltText}></img>
+            <div className={`final-switcher-card-image ${!secondOptionActive ? 'final-switcher-card-image-gray' : ''}`}>
+                <img src={secondOptionImg} alt={secondOptionImageAltText}></img>
             </div>
             <div className={`${secondOptionActive ? 'final-switcher-card-shadow-active' : 'final-switcher-card-shadow'}`}></div>
             <div className={`${secondOptionActive ? 'final-switcher-card-title-active' : 'final-switcher-card-title'}`}>

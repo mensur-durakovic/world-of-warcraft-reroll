@@ -379,6 +379,10 @@
       align-items: center;
       justify-content: center;
 
+      &-gray{
+          filter: grayscale(100%);
+      }
+
       & > img {
         min-width: 80px;
         max-width: 80px;

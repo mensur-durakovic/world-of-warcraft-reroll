@@ -15,38 +15,32 @@ import {
   HUNTER,
 } from "../../constants/localizations";
 import Druid from "../../assets/images/druid.png";
-import DruidGray from "../../assets/images/druid_gray.png";
 import Shaman from "../../assets/images/shaman.png";
-import ShamanGrey from "../../assets/images/shaman_gray.png";
 import Priest from "../../assets/images/priest.png";
-import PriestGrey from "../../assets/images/priest_gray.png";
 import Mage from "../../assets/images/mage.png";
-import MageGrey from "../../assets/images/mage_gray.png";
 import Warlock from "../../assets/images/warlock.png";
-import WarlockGrey from "../../assets/images/warlock_gray.png";
 import Hunter from "../../assets/images/hunter.png";
-import HunterGrey from "../../assets/images/hunter_gray.png";
 
 const ThirdPage = React.memo((props) => {
   const { setPage, gameMode, gameData, finalGameData, setWinner, setFinalGameData, navChoice, choiceHandler } = props;
   const [finalVisible, setFinalVisible] = useState(false);
 
-  const getOptionImage = (name, grayMode) => {
+  const getOptionImage = (name) => {
     switch (name) {
       case DRUID:
-        return grayMode ? DruidGray : Druid;
+        return Druid;
       case SHAMAN:
-        return grayMode ? ShamanGrey : Shaman;
+        return Shaman;
       case PRIEST:
-        return grayMode ? PriestGrey : Priest;
+        return Priest;
       case MAGE:
-        return grayMode ? MageGrey : Mage;
+        return Mage;
       case WARLOCK:
-        return grayMode ? WarlockGrey : Warlock;
+        return Warlock;
       case HUNTER:
-        return grayMode ? HunterGrey : Hunter;
+        return Hunter;
       default:
-        return grayMode ? DruidGray : Druid;
+        return Druid;
     }
   };
 
@@ -65,11 +59,9 @@ const ThirdPage = React.memo((props) => {
           activeOption={firstOption.isActive ? 1 : 2}
           firstOptionTitle={firstOption.name}
           firstOptionImg={getOptionImage(firstOption.name)}
-          firstOptionImgGray={getOptionImage(firstOption.name, true)}
           firstOptionImageAltText={`logo ${firstOption.name}`}
           secondOptionTitle={secondOption.name}
           secondOptionImg={getOptionImage(secondOption.name)}
-          secondOptionImgGray={getOptionImage(secondOption.name, true)}
           secondOptionImageAltText={`logo ${secondOption.name}`}
           choiceHandler={choiceHandler}
           choiceHandlerDisabled={finalVisible}
@@ -98,12 +90,10 @@ const ThirdPage = React.memo((props) => {
 
           firstOptionTitle={firstPick.name}
           firstOptionImg={getOptionImage(firstPick.name)}
-          firstOptionImgGray={getOptionImage(firstPick.name, true)}
           firstOptionImageAltText={`logo ${firstPick.name}`}
 
           secondOptionTitle={secondPick.name}
           secondOptionImg={getOptionImage(secondPick.name)}
-          secondOptionImgGray={getOptionImage(secondPick.name, true)}
           secondOptionImageAltText={`logo ${secondPick.name}`}
 
           thirdOptionTitle={thirdPick.name}

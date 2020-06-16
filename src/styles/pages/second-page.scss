@@ -50,19 +50,34 @@
 
         &-special {
           position: absolute;
-          right: -35px;
+          //right: -35px;
+          right: -100px;
+          -webkit-animation: fadeFromRightMobile 1s linear forwards;
+          animation: fadeFromRightMobile 1s linear forwards;
           @media (min-width: 768px) {
-            right: -55px;
+            //right: -55px;
+            right: -300px;
+            -webkit-animation: fadeFromRight 1s linear forwards;
+            animation: fadeFromRight 1s linear forwards;
           }
         }
 
         &-special-sec {
           position: absolute;
-          right: 60px;
+          //right: 60px;
+          right: -100px;
+          -webkit-animation: fadeFromRightSecMobile 1s linear forwards;
+          animation: fadeFromRightSecMobile 1s linear forwards;
+
           @media (min-width: 768px) {
-            right: 110px;
+            //right: 110px;
+            right: -150px;
+            -webkit-animation: fadeFromRightSec 1s linear forwards;
+            animation: fadeFromRightSec 1s linear forwards;
           }
         }
+
+        
 
         &-title {
           font-size: 18px;
@@ -111,5 +126,68 @@
         background-size: cover;
       }
     }
+  }
+}
+
+@keyframes fadeFromRightSecMobile {
+  0% {
+    -webkit-transform: translate(0, 0);
+            transform: translate(0, 0);
+  }
+  50% {
+    -webkit-transform: translate(-30px, 0);
+            transform: translate(-30px, 0);
+  }
+  100% {
+    -webkit-transform: translate(-60px, 0);
+            transform: translate(-60px, 0);
+  }
+}
+
+@keyframes fadeFromRightSec {
+  0% {
+    -webkit-transform: translate(0, 0);
+            transform: translate(0, 0);
+  }
+  50% {
+    -webkit-transform: translate(-50px, 0);
+            transform: translate(-50px, 0);
+  }
+  100% {
+    -webkit-transform: translate(-100px, 0);
+            transform: translate(-100px, 0);
+  }
+}
+
+
+//first image
+
+@keyframes fadeFromRightMobile {
+  0% {
+    -webkit-transform: translate(0, 0);
+            transform: translate(0, 0);
+  }
+  50% {
+    -webkit-transform: translate(-95px, 0);
+            transform: translate(-95px, 0);
+  }
+  100% {
+    -webkit-transform: translate(-155px, 0);
+            transform: translate(-155px, 0);
+  }
+}
+
+@keyframes fadeFromRight {
+  0% {
+    -webkit-transform: translate(-100px, 0);
+            transform: translate(-100px, 0);
+  }
+  50% {
+    -webkit-transform: translate(-235px, 0);
+            transform: translate(-235px, 0);
+  }
+  100% {
+    -webkit-transform: translate(-435px, 0);
+            transform: translate(-435px, 0);
   }
 }

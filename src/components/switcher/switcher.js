@@ -7,11 +7,9 @@ const Switcher = React.memo((props) => {
     activeOption,
     firstOptionTitle,
     firstOptionImg,
-    firstOptionImgGray,
     firstOptionImageAltText,
     secondOptionTitle,
     secondOptionImg,
-    secondOptionImgGray,
     secondOptionImageAltText,
     choiceHandler,
     choiceHandlerDisabled
@@ -35,8 +33,8 @@ const Switcher = React.memo((props) => {
       <div className="switcher-head">
         <div className="switcher-card">
             <div className={`${firstOptionActive ? 'switcher-card-shadow-active' : 'switcher-card-shadow'}`}></div>
-            <div className="switcher-card-image">
-                <img src={firstOptionActive ? firstOptionImg : firstOptionImgGray} alt={firstOptionImageAltText}></img>
+            <div className={`switcher-card-image ${!firstOptionActive ? 'switcher-card-image-gray' : ''}`}>
+                <img src={firstOptionImg} alt={firstOptionImageAltText}></img>
             </div>
             <div className={`${firstOptionActive ? 'switcher-card-shadow-active' : 'switcher-card-shadow'}`}></div>
             <div className={`${firstOptionActive ? 'switcher-card-title-active' : 'switcher-card-title'}`}>
@@ -45,8 +43,8 @@ const Switcher = React.memo((props) => {
         </div>
         <div className="switcher-card">
             <div className={`${secondOptionActive ? 'switcher-card-shadow-active' : 'switcher-card-shadow'}`}></div>
-            <div className="switcher-card-image">
-                <img src={secondOptionActive ? secondOptionImg : secondOptionImgGray} alt={secondOptionImageAltText}></img>
+            <div className={`switcher-card-image ${!secondOptionActive ? 'switcher-card-image-gray' : ''}`}>
+                <img src={secondOptionImg} alt={secondOptionImageAltText}></img>
             </div>
             <div className={`${secondOptionActive ? 'switcher-card-shadow-active' : 'switcher-card-shadow'}`}></div>
             <div className={`${secondOptionActive ? 'switcher-card-title-active' : 'switcher-card-title'}`}>

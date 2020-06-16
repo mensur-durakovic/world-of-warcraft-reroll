@@ -10,15 +10,10 @@ import {
 import { gameModeClassic } from '../../constants/gameModes'
 
 import TankActive from '../../assets/images/menu_option_tank.png';
-import TankInactive from '../../assets/images/menu_option_tank_gray.png';
 import AllActive from '../../assets/images/menu_option_all.png';
-import AllInactive from '../../assets/images/menu_option_all_gray.png';
 import HealerActive from '../../assets/images/menu_option_healer.png';
-import HealerInactive from '../../assets/images/menu_option_healer_gray.png';
 import RangedActive from '../../assets/images/menu_option_ranged_dps.png';
-import RangedInactive from '../../assets/images/menu_option_ranged_dps_gray.png';
 import MeleeActive from '../../assets/images/menu_option_dps_melee.png';
-import MeleeInactive from '../../assets/images/menu_option_dps_melee_gray.png';
 
 const Navigation = React.memo(props => {
 
@@ -27,13 +22,13 @@ const Navigation = React.memo(props => {
     const chosenGameMode = gameMode ? gameMode : gameModeClassic;
 
 
-    const getResourceImage = (name, isActive) => {
+    const getResourceImage = (name) => {
         switch(name){
-            case NAVIGATION_ITEM_ALL: return isActive ? AllActive : AllInactive;
-            case NAVIGATION_ITEM_TANK_ONLY: return isActive ? TankActive : TankInactive;
-            case NAVIGATION_ITEM_HEALER_ONLY: return isActive ? HealerActive : HealerInactive;
-            case NAVIGATION_ITEM_RANGED_DPS_ONLY: return isActive ? RangedActive : RangedInactive;
-            case NAVIGATION_ITEM_MELEE_DPS_ONLY: return isActive ? MeleeActive : MeleeInactive;
+            case NAVIGATION_ITEM_ALL: return AllActive;
+            case NAVIGATION_ITEM_TANK_ONLY: return TankActive;
+            case NAVIGATION_ITEM_HEALER_ONLY: return HealerActive;
+            case NAVIGATION_ITEM_RANGED_DPS_ONLY: return RangedActive;
+            case NAVIGATION_ITEM_MELEE_DPS_ONLY: return MeleeActive;
             default: return AllActive;
         }
     }
@@ -53,8 +48,8 @@ const Navigation = React.memo(props => {
                     <div className={`navigation-logo ${item.isActive 
                         ? `navigation-logo-active navigation-logo-active-${animationDirection}` : ''}`}>
                     </div>
-                    <div className='navigation-logo-icon-wrapper'>
-                        <img src={getResourceImage(item.name, item.isActive)} alt={item.name}></img>
+                    <div className={`navigation-logo-icon-wrapper ${!item.isActive ? 'navigation-logo-icon-wrapper-gray' : ''}`}>
+                        <img src={getResourceImage(item.name)} alt={item.name}></img>
                     </div>
                 </div>
                 
