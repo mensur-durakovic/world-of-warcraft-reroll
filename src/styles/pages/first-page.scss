@@ -1,6 +1,6 @@
 .first-page {
   &-classic {
-    background: url("../../assets/images/CLASSIC_black1.png");
+    background: url("../../assets/images/CLASSIC_black1web.jpg");
     height: 100%;
     background-position: center;
     background-repeat: no-repeat;
@@ -9,14 +9,13 @@
   }
 
   &-azeroth {
-    background: url("../../assets/images/BFA_black1.png");
+    background: url("../../assets/images/BFA_black1web.jpg");
     height: 100%;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
     overflow-y: auto;
   }
-
 
   main {
     padding: 10px 0 100px 0;
@@ -64,7 +63,7 @@
       align-items: center;
       justify-content: center;
 
-      &-gray{
+      &-gray {
         filter: grayscale(100%);
       }
 

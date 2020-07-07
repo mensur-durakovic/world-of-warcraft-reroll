@@ -1,9 +1,6 @@
-import React, { useState } from "react";
+import React from "react";
 import NavigationSecondary from "../../components/navigation/navigationSecondary";
 import Footer from "../../components/footer/footer";
-import Switcher from "../../components/switcher/switcher";
-import FinalSwitcher from "../../components/switcher/finalSwitcher";
-import Coin from '../../assets/images/coin.svg';
 import { gameModeClassic } from "../../constants/gameModes";
 
 import {
@@ -21,11 +18,10 @@ import Mage from "../../assets/images/mage.png";
 import Warlock from "../../assets/images/warlock.png";
 import Hunter from "../../assets/images/hunter.png";
 
-const ThirdPage = React.memo((props) => {
-  const { setPage, gameMode, gameData, finalGameData, setWinner, setFinalGameData, navChoice, choiceHandler } = props;
-  const [finalVisible, setFinalVisible] = useState(false);
+const FourthPage = React.memo((props) => {
+  const { setPage, gameMode, winner, navChoice } = props;
 
-  const getOptionImage = (name) => {
+  const getImage = (name) => {
     switch (name) {
       case DRUID:
         return Druid;
@@ -44,76 +40,18 @@ const ThirdPage = React.memo((props) => {
     }
   };
 
-  const generateSwitchers = () => {
-    if (!gameData) {
-      return;
-    }
-    const switchers = [];
-    for (let i = 0; i < gameData[gameMode].pickingClasses.length; i += 2) {
-      const firstOption = gameData[gameMode].pickingClasses[i];
-      const secondOption = gameData[gameMode].pickingClasses[i + 1];
-
-      const newSwitcher = (
-        <Switcher
-          key={`switcher-${Math.random()}`}
-          activeOption={firstOption.isActive ? 1 : 2}
-          firstOptionTitle={firstOption.name}
-          firstOptionImg={getOptionImage(firstOption.name)}
-          firstOptionImageAltText={`logo ${firstOption.name}`}
-          secondOptionTitle={secondOption.name}
-          secondOptionImg={getOptionImage(secondOption.name)}
-          secondOptionImageAltText={`logo ${secondOption.name}`}
-          choiceHandler={choiceHandler}
-          choiceHandlerDisabled={finalVisible}
-        />
-      );
-      switchers.push(newSwitcher);
-    }
-    return switchers;
+  const getCharacteristics = () => {
+    const characteristics = winner.characteristics.map((c) => (
+      <div
+        className="third-page-result-body-right-item"
+        key={`${c}-${Math.random()}`}
+      >
+        <div className="third-page-result-body-right-item-coin"></div>
+        <div>{c}</div>
+      </div>
+    ));
+    return characteristics;
   };
-
-  const lockFinalPicks = () => {
-    const picks = gameData[gameMode].pickingClasses.filter(item => item.isActive);
-    setFinalGameData(picks);
-    setFinalVisible(true);
-  }
-
-  const generateFinalSwitcher = () => {
-    if (!finalGameData) {
-      return;
-    }
-
-    const firstPick = finalGameData[0], secondPick = finalGameData[1], thirdPick = finalGameData[2];
-
-    return <FinalSwitcher
-          activeOption={firstPick.isActive ? 1 : 2}
-
-          firstOptionTitle={firstPick.name}
-          firstOptionImg={getOptionImage(firstPick.name)}
-          firstOptionImageAltText={`logo ${firstPick.name}`}
-
-          secondOptionTitle={secondPick.name}
-          secondOptionImg={getOptionImage(secondPick.name)}
-          secondOptionImageAltText={`logo ${secondPick.name}`}
-
-          thirdOptionTitle={thirdPick.name}
-          thirdOptionImg={getOptionImage(thirdPick.name)}
-          thirdOptionImageAltText={`logo ${thirdPick.name}`}
-
-          choiceHandler={choiceHandler}
-        />;
-  };
-
-  const calculateWinner = () => {
-    const finalPicks = gameData[gameMode].pickingClasses.filter(item => item.isActive);
-
-    // min and max included 
-    const randomIntFromInterval = (min, max) => Math.floor(Math.random() * (max - min + 1) + min);
-    const winner = finalPicks[randomIntFromInterval(0, 1)];
-    setWinner(winner);
-    setPage(4);
-  }
-
 
   return (
     <div
@@ -125,30 +63,39 @@ const ThirdPage = React.memo((props) => {
     >
       <NavigationSecondary gameMode={gameMode} navChoice={navChoice} />
       <main>
-        <div className="third-page-title">{"Choose a role"}</div>
-        <div className="third-page-container">{generateSwitchers()}</div>
-        {!finalVisible && <div className="third-page-toss-it" onClick={lockFinalPicks}>
-          <div className='third-page-toss-it-image'></div>
-        </div>}
-        {finalVisible && <section className="third-page-final">
-          <div className="third-page-final-divider"></div>
-          <div className="third-page-final-container">{generateFinalSwitcher()}</div>
-          <div className="third-page-final-button">
-            <div className='third-page-final-button-wrapper' onClick={calculateWinner}>
-              <div className='third-page-final-button-image'>
-                <img src={Coin} alt='coin'></img>
-              </div>
-              <div className='third-page-final-button-text'>
-                {'Check'}
+        <div className="third-page-result">
+          <div className="third-page-result-title">{"You are a"}</div>
+          <div className="third-page-result-body">
+            <div className="third-page-result-body-left">
+              <div className="third-page-result-card">
+                <div className="third-page-result-card-image">
+                  <img src={getImage(winner.name)} alt={winner.name}></img>
+                </div>
+                <div className="third-page-result-card-title">
+                  {winner.name}
+                </div>
+                <div className="third-page-result-card-shadow">
+                  <div className="third-page-result-card-shadow-image"></div>
+                </div>
               </div>
             </div>
+            <div className="third-page-result-body-right">
+              {getCharacteristics()}
+            </div>
           </div>
-        </section>}
+          <div className="third-page-result-footer">
+            <div
+              className="third-page-result-footer-repeat"
+              onClick={() => setPage(1)}
+            >
+              <div className="third-page-result-footer-repeat-button"></div>
+            </div>
+          </div>
+        </div>
       </main>
-     
       <Footer />
     </div>
   );
 });
 
-export default ThirdPage;
+export default FourthPage;

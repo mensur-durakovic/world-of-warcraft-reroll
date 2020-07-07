@@ -1,24 +1,26 @@
-html, body, #root {
-    margin: 0;
-    padding: 0;
-    height: 100%;
-    color: white;
-    font-family: 'Cabal';
-    font-size: 14px;
-    overflow-x: hidden;
+html,
+body,
+#root {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  color: white;
+  font-family: "Cabal";
+  font-size: 14px;
+  overflow-x: hidden;
 }
 
 ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
 }
 
 ul li {
-    margin: 0;
-    padding: 0;
+  margin: 0;
+  padding: 0;
 }
 
 ul li a {
-    text-decoration: none;
+  text-decoration: none;
 }

@@ -1,182 +1,223 @@
 .third-page {
-    &-classic {
-      background: url("../../assets/images/CLASSIC_black1.png");
-      height: 100%;
-      min-height: 100vh;
-      background-position: center;
-      background-repeat: no-repeat;
-      background-size: cover;
-      overflow-y: auto;
+  &-classic {
+    background: url("../../assets/images/CLASSIC_black1web.jpg");
+    height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow-y: auto;
+  }
+
+  &-azeroth {
+    background: url("../../assets/images/BFA_black1web.jpg");
+    height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow-y: auto;
+  }
+
+  main {
+    padding: 80px 0 100px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+
+    @media (min-width: 768px) {
+      width: 100%;
+      height: 75vh;
+      padding: 0;
     }
-  
-    &-azeroth {
-      background: url("../../assets/images/BFA_black1.png");
-      height: 100%;
-      min-height: 100vh;
-      background-position: center;
-      background-repeat: no-repeat;
-      background-size: cover;
-      overflow-y: auto;
+  }
+
+  &-result {
+    border-radius: 10px;
+    padding: 15px;
+    background-color: rgba(42, 42, 42, 0.7);
+    margin: 85px 0;
+
+    @media (min-width: 768px) {
+      width: 500px;
+      height: 440px;
+      padding: 35px;
+      margin-top: 85px;
     }
 
-    > main {
+    &-title {
+      font-size: 25px;
+      text-align: center;
+    }
+
+    &-body {
       display: flex;
       flex-direction: column;
       align-items: center;
       justify-content: center;
-      padding: 30px 0 120px 0; //120px is footer height
-      
       @media (min-width: 768px) {
-        padding: 80px 0 120px 0;
-      }
-      @media (min-width: 1025px) {
-        padding: 100px 0 120px 0;
-      }
-    }
-
-    &-title{
-      font-size: 24px;
-      margin-bottom: 25px;
-      @media (min-width: 768px) {
-        margin-bottom: 75px;
-      }
-    }
-
-    &-container{
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-
-      @media (min-width: 1025px) {
         flex-direction: row;
       }
+
+      &-left {
+        height: auto;
+        @media (min-width: 768px) {
+          height: 300px;
+          width: 50%;
+          min-width: 50%;
+        }
+      }
+
+      &-right {
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
+        font-size: 12px;
+        @media (min-width: 768px) {
+          height: 300px;
+          width: 50%;
+          min-width: 50%;
+        }
+
+        &-item {
+          margin: 15px 0;
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+          justify-content: flex-start;
+
+          &-coin {
+            width: 15px;
+            min-width: 15px;
+            max-width: 15px;
+            height: 15px;
+            min-height: 15px;
+            max-height: 15px;
+            margin-right: 10px;
+            background: url("../../assets/images/coin.svg");
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: contain;
+          }
+        }
+      }
     }
 
-    &-toss-it {
-      height: 65px;
-      min-height: 65px;
-      max-height: 65px;
-      width: 250px;
-      min-width: 250px;
-      max-width: 250px;
-      border-radius: 5px;
-      background-color: #242625;
+    &-card {
+      margin-top: 25px;
+
+      &-image {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        & > img {
+          min-width: 250px;
+          max-width: 250px;
+          min-height: 250px;
+          max-height: 250px;
+
+          @media (min-width: 768px) {
+            min-width: 150px;
+            max-width: 150px;
+            min-height: 150px;
+            max-height: 150px;
+          }
+        }
+      }
+
+      &-title {
+        text-align: center;
+        text-transform: uppercase;
+        font-size: 35px;
+        margin: 20px 0;
+      }
+
+      &-shadow {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        margin: 20px 0;
+
+        &-image {
+          width: 150px;
+          max-width: 150px;
+          min-width: 150px;
+          height: 30px;
+          background: url("../../assets/images/shadow.png");
+          background-position: center;
+          background-repeat: no-repeat;
+          background-size: contain;
+          @media (min-width: 768px) {
+            width: 220px;
+            max-width: 220px;
+            min-width: 220px;
+            background-size: contain;
+          }
+        }
+      }
+    }
+
+    &-footer {
       display: flex;
       align-items: center;
       justify-content: center;
-      cursor: pointer;
-      -webkit-box-shadow: inset 0px 10px 5px 0px rgba(50, 51, 50, 1);
-      -moz-box-shadow: inset 0px 10px 5px 0px rgba(50, 51, 50, 1);
-      box-shadow: inset 0px 10px 5px 0px rgba(50, 51, 50, 1);
-      margin: 0;
-      @media (min-width: 1025px) {
-        margin: 30px 0;
-      }
-  
-      > div {
-        width: 50%;
-        height: 50%;
-        background: url("../../assets/images/continue.svg");
-        background-position: center;
-        background-repeat: no-repeat;
-        background-size: contain;
-      }
-  
-      &:hover {
-        background-color: $yellow;
-        -webkit-box-shadow: inset 0px 10px 5px 0px rgba(255, 241, 110, 1);
-        -moz-box-shadow: inset 0px 10px 5px 0px rgba(255, 241, 110, 1);
-        box-shadow: inset 0px 10px 5px 0px rgba(255, 241, 110, 1);
-  
+      margin: 25px 0;
+
+      &-repeat {
+        height: 60px;
+        min-height: 60px;
+        max-height: 60px;
+        width: 150px;
+        min-width: 150px;
+        max-width: 150px;
+        border-radius: 5px;
+        background-color: #242625;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        -webkit-box-shadow: inset 0px 10px 5px 0px rgba(50, 51, 50, 1);
+        -moz-box-shadow: inset 0px 10px 5px 0px rgba(50, 51, 50, 1);
+        box-shadow: inset 0px 10px 5px 0px rgba(50, 51, 50, 1);
+
+        @media (min-width: 768px) {
+          height: 80px;
+          min-height: 80px;
+          max-height: 80px;
+          width: 250px;
+          min-width: 250px;
+          max-width: 250px;
+        }
+
         > div {
           width: 50%;
           height: 50%;
-          background: url("../../assets/images/continue_dark.svg");
+          background: url("../../assets/images/continue.svg");
           background-position: center;
           background-repeat: no-repeat;
           background-size: contain;
         }
-      }
-    }
 
-    &-final{
-      width: 100%;
+        &:hover {
+          background-color: $yellow;
+          -webkit-box-shadow: inset 0px 10px 5px 0px rgba(255, 241, 110, 1);
+          -moz-box-shadow: inset 0px 10px 5px 0px rgba(255, 241, 110, 1);
+          box-shadow: inset 0px 10px 5px 0px rgba(255, 241, 110, 1);
 
-      &-divider{
-        width: 100%;
-        height: 3px;
-        background-color: #353434;
-        margin: 50px 0;
-      }
-
-      &-container{
-        display: flex;
-        align-items: center;
-        justify-content: center;
-      }
-
-      &-button{
-
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        margin: 35px 0;
-
-        &-wrapper{
-          transition-duration: 0.2s;
-          display: flex;
-          flex-direction: column;
-          align-items: center;
-          justify-content: center;
-          cursor: pointer;
-          transition-duration: 0.2s;
-
-          &:hover {
-            .third-page-final-button-image{
-              background-color: #1f1f1f;
-              transition-duration: 0.2s;
-            }
-
-            .third-page-final-button-text{
-              font-size: 32px;
-              transition-duration: 0.2s;
-            }
-
+          > div {
+            width: 50%;
+            height: 50%;
+            background: url("../../assets/images/continue_dark.svg");
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: contain;
           }
-
-          
-        }
-
-        &-image{
-
-          margin-bottom: 15px;
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          padding: 20px;
-          border-radius: 80px;
-          transition-duration: 0.2s;
-
-          & > img{
-            min-width: 100px;
-            max-width: 100px;
-            min-height: 100px;
-            max-height: 100px;
-          }
-
-          
-        }
-
-        &-text{
-          height: 35px;
-          min-height: 35px;
-          transition-duration: 0.2s;
-          cursor: pointer;
-          font-size: 30px;
-          
         }
       }
     }
+  }
 }

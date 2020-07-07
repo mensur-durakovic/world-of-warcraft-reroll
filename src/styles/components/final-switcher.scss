@@ -55,7 +55,6 @@
             height: 40px;
             max-height: 40px;
 
-
             &-active {
               width: 1px;
               max-width: 1px;
@@ -276,100 +275,97 @@
     }
   }
 
-  &-footer{
+  &-footer {
+    &-top {
+      display: flex;
+      flex-direction: row;
+      height: 100%;
 
-    &-top{
-
+      &-left {
+        width: 50%;
+        max-width: 50%;
+        min-width: 50%;
         display: flex;
         flex-direction: row;
-        height: 100%;
-        
-        &-left{
-            width: 50%;
-            max-width: 50%;
-            min-width: 50%;
-            display: flex;
-            flex-direction: row;
-            align-items: flex-end;
-            justify-content: center;
+        align-items: flex-end;
+        justify-content: center;
 
-            &-vertical{
-                width: 1px;
-                max-width: 1px;
-                height: 70px;
-                background-color: $yellow;
-                margin-left: 335px;
-                @media (min-width: 768px) {
-                  margin-left: 250px;
-                }
-            }
-
-            &-horizontal{
-                height: 1px;
-                max-height: 1px;
-                width: 75px;
-                max-width: 75px;
-                background-color: $yellow;
-
-                @media (min-width: 768px) {
-                  width: 180px;
-                  max-width: 180px;
-                }
-            }
+        &-vertical {
+          width: 1px;
+          max-width: 1px;
+          height: 70px;
+          background-color: $yellow;
+          margin-left: 335px;
+          @media (min-width: 768px) {
+            margin-left: 250px;
+          }
         }
 
-        &-right{
-            width: 50%;
-            max-width: 50%;
-            min-width: 50%;
-            display: flex;
-            flex-direction: row;
-            align-items: flex-end;
-            justify-content: center;
+        &-horizontal {
+          height: 1px;
+          max-height: 1px;
+          width: 75px;
+          max-width: 75px;
+          background-color: $yellow;
 
-            &-vertical{
-                width: 1px;
-                max-width: 1px;
-                height: 70px;
-                background-color: $yellow;
-                margin-right: 264px;
-                @media (min-width: 768px) {
-                  margin-right: 124px;
-                }
-            }
-
-            &-horizontal{
-                height: 1px;
-                max-height: 1px;
-                width: 130px;
-                max-width: 130px;
-                background-color: $yellow;
-                @media (min-width: 768px) {
-                  width: 250px;
-                  max-width: 250px;
-                }
-            }
+          @media (min-width: 768px) {
+            width: 180px;
+            max-width: 180px;
+          }
         }
+      }
+
+      &-right {
+        width: 50%;
+        max-width: 50%;
+        min-width: 50%;
+        display: flex;
+        flex-direction: row;
+        align-items: flex-end;
+        justify-content: center;
+
+        &-vertical {
+          width: 1px;
+          max-width: 1px;
+          height: 70px;
+          background-color: $yellow;
+          margin-right: 264px;
+          @media (min-width: 768px) {
+            margin-right: 124px;
+          }
+        }
+
+        &-horizontal {
+          height: 1px;
+          max-height: 1px;
+          width: 130px;
+          max-width: 130px;
+          background-color: $yellow;
+          @media (min-width: 768px) {
+            width: 250px;
+            max-width: 250px;
+          }
+        }
+      }
     }
 
     &-bottom {
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        justify-content: center;
-        height: 70px;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+      height: 70px;
 
-        &-vertical{
-            width: 1px;
-            max-width: 1px;
-            height: 70px;
-            background-color: $yellow;
-        }
+      &-vertical {
+        width: 1px;
+        max-width: 1px;
+        height: 70px;
+        background-color: $yellow;
+      }
     }
   }
 
   &-card {
-    cursor: pointer;
     margin: 0 5px;
     @media (min-width: 770px) {
       margin: 0 15px;
@@ -380,8 +376,8 @@
       align-items: center;
       justify-content: center;
 
-      &-gray{
-          filter: grayscale(100%);
+      &-gray {
+        filter: grayscale(100%);
       }
 
       & > img {
